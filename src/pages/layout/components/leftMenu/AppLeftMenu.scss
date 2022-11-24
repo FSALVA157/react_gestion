@@ -1,0 +1,9 @@
+$bg-color: #008185;
+$btn-color-light: #4db1b5;
+
+.left-menu-main,
+.ant-menu,
+.ant-menu-item-selected,
+.ant-layout-sider-trigger {
+  background-color: $bg-color !important;
+}

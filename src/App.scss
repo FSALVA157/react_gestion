@@ -1,0 +1,88 @@
+@import '~antd/dist/antd.css';
+
+$btn-primary: #f15e21;
+$btn-primary-light: #ff8f50;
+$btn-color: #f15e21;
+$btn-color-light: #ff8f50;
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+
+/*.starter-app {
+  height: 100%;
+}*/
+
+.ant-btn-primary {
+  color: #fff;
+  background-color: $btn-primary;
+  border-color: $btn-primary;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+}
+
+.ant-btn-primary:hover, .ant-btn-primary:focus {
+  color: #fff !important;
+  border-color: #fff !important;
+  background: -webkit-gradient(linear, left top, right top, from($btn-primary), to($btn-primary-light));
+  background: linear-gradient(to right, $btn-primary, $btn-primary-light);
+  border-color: $btn-primary;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.12);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.045);
+}
+
+.ant-btn:hover, .ant-btn:focus {
+  color: $btn-color;
+  border-color: $btn-color;
+}
+
+::selection {
+  color: #fff;
+  background: $btn-primary;
+}
+
+a {
+  color: $btn-color;
+}
+
+a:hover {
+  color: $btn-color-light;
+}
