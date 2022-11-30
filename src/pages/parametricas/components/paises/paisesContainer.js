@@ -1,13 +1,13 @@
 import { Descriptions, Form } from 'antd'
 import { Outlet } from 'react-router-dom';
 //import { FormConfig } from '../../../../shared/config/GlobalConfig'
-import HabilitadoTag from '../../../../shared/components/habilitadoTag'
-import EntidadesContainer from '../../../../shared/entidades/entidadesContainer'
+import AppEnableTag from '../../../../shared/components/AppEnableTag'
+import EntitiesContainer from '../../../../shared/entities/EntitiesContainer'
 
 const FormItem = Form.Item;
 const DescItem = Descriptions.Item;
 
-const metadatos = {
+const metadata = {
   endpoint: '/pais/',
   modulo: '',
   entidad: 'Pais',
@@ -18,7 +18,7 @@ const columns = [
   { title: 'Nombre', dataIndex: 'nombre', key: 'nombre' },
   {
     title: 'Habilitado', dataIndex: 'habilitado', key: 'habilitado',
-    render: text => <HabilitadoTag value={text} />
+    render: text => <AppEnableTag value={text} />
   },
 ]
 
@@ -37,15 +37,13 @@ const viewDefinition = entidad =>
 
 const PaisesContainer = props => {
   return (
-    <>
-      <Outlet />
-      <EntidadesContainer
-        action= {props.action}
+         
+      <EntitiesContainer
         columns={columns}
-        metadatos={metadatos}
+        metadata={metadata}
         viewDefinition={viewDefinition}
         formDefinition={formDefinition} />
-    </>
+    
   )
 }
 

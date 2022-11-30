@@ -1,20 +1,20 @@
 import { Layout } from 'antd'
 import { Route, Routes, Outlet } from 'react-router-dom'
 import AppBreadcrumb from './breadcrumb/AppBreadcrumb'
-import HomePage from '../../../home/components/HomePage'
+//import HomePage from '../../../home/components/HomePage'
 import ParametricasPage from '../../../parametricas/components/parametricasPage'
 import PaisesContainer from '../../../parametricas/components/paises/paisesContainer'
-import ProvinciasContainer from '../../../parametricas/components/provincias/provinciasContainer'
-import DepartamentosContainer from '../../../parametricas/components/departamentos/departamentosContainer'
-import LocalidadesContainer from '../../../parametricas/components/localidades/localidadesContainer'
-import CategoriasIvaContainer from '../../../parametricas/components/categorias_iva/categoriasIvaContainer'
-import TiposComprobanteContainer from '../../../parametricas/components/tipos_comprobante/tiposComprobanteContainer'
-import TiposImpuestoContainer from '../../../parametricas/components/tipos_impuesto/tiposImpuestoContainer'
-import TiposIvaContainer from '../../../parametricas/components/tipos_iva/tiposIvaContainer'
-import TiposOficinaContainer from '../../../parametricas/components/tipos_oficina/tiposOficinaContainer'
-import OficinasContainer from '../../../parametricas/components/oficinas/oficinasContainer'
+// import ProvinciasContainer from '../../../parametricas/components/provincias/provinciasContainer'
+// import DepartamentosContainer from '../../../parametricas/components/departamentos/departamentosContainer'
+// import LocalidadesContainer from '../../../parametricas/components/localidades/localidadesContainer'
+// import CategoriasIvaContainer from '../../../parametricas/components/categorias_iva/categoriasIvaContainer'
+// import TiposComprobanteContainer from '../../../parametricas/components/tipos_comprobante/tiposComprobanteContainer'
+// import TiposImpuestoContainer from '../../../parametricas/components/tipos_impuesto/tiposImpuestoContainer'
+// import TiposIvaContainer from '../../../parametricas/components/tipos_iva/tiposIvaContainer'
+// import TiposOficinaContainer from '../../../parametricas/components/tipos_oficina/tiposOficinaContainer'
+// import OficinasContainer from '../../../parametricas/components/oficinas/oficinasContainer'
 
-import './AppContent.scss'
+//import './AppContent.scss'
 //import ExpedientesContainer from '../../../expedientes/expedientesContainer'
 //import ComprasMainContainer from '../../../compras/comprasMainContainer'
 //import InventarioContainer from '../../../inventario/inventarioContainer'
@@ -35,18 +35,22 @@ const AppContent = () => {
         <AppBreadcrumb />
         <section className='route-section'>
           <Routes >
-            <Route path='/home' element={<HomePage />} />
+            {/* <Route path='/home' element={<HomePage />} /> */}
             <Route path="parametricas" element={<ParametricasPage />} />
+
             <Route path="parametricas/paises" element={<PaisesContainer />} />
-            <Route path="parametricas/provincias" element={<ProvinciasContainer />} />
+            <Route path="parametricas/paises/new" element={<PaisesContainer />} />
+            <Route path="parametricas/paises/edit/:id" element={<PaisesContainer />} />
+            
+            {/* <Route path="parametricas/provincias" element={<ProvinciasContainer />} />
             <Route path={'departamento'} element={<DepartamentosContainer />} />
             <Route path={'localidades'} element={<LocalidadesContainer />} />
             <Route path={'categorias_iva'} element={<CategoriasIvaContainer />} />
-            <Route path={'ipos_comprobant'} element={<TiposComprobanteContainer />} />
-            <Route path={'tipos_impusto'} element={<TiposImpuestoContainer />} />
+            <Route path={'tipos_comprobante'} element={<TiposComprobanteContainer />} />
+            <Route path={'tipos_impuesto'} element={<TiposImpuestoContainer />} />
             <Route path={'tipos_iva'} element={<TiposIvaContainer />} />
-            <Route path={'tipos_ofiina'} element={<TiposOficinaContainer />} />
-            <Route path={'oficinas'} element={<OficinasContainer />} />
+            <Route path={'tipos_oficina'} element={<TiposOficinaContainer />} />
+            <Route path={'oficinas'} element={<OficinasContainer />} /> */}
           </Routes>
           <Outlet />
         </section>
