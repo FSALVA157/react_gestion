@@ -4,7 +4,7 @@ import AppBreadcrumb from './breadcrumb/AppBreadcrumb'
 //import HomePage from '../../../home/components/HomePage'
 import ParametricasPage from '../../../parametricas/components/parametricasPage'
 import PaisesContainer from '../../../parametricas/components/paises/paisesContainer'
-// import ProvinciasContainer from '../../../parametricas/components/provincias/provinciasContainer'
+import ProvinciasContainer from '../../../parametricas/components/provincias/provinciasContainer'
 // import DepartamentosContainer from '../../../parametricas/components/departamentos/departamentosContainer'
 // import LocalidadesContainer from '../../../parametricas/components/localidades/localidadesContainer'
 // import CategoriasIvaContainer from '../../../parametricas/components/categorias_iva/categoriasIvaContainer'
@@ -38,12 +38,17 @@ const AppContent = () => {
             {/* <Route path='/home' element={<HomePage />} /> */}
             <Route path="parametricas" element={<ParametricasPage />} />
 
-            <Route path="parametricas/paises" element={<PaisesContainer />} />
-            <Route path="parametricas/paises/new" element={<PaisesContainer />} />
-            <Route path="parametricas/paises/edit/:id" element={<PaisesContainer />} />
-            
-            {/* <Route path="parametricas/provincias" element={<ProvinciasContainer />} />
-            <Route path={'departamento'} element={<DepartamentosContainer />} />
+            <Route path="parametricas/paises" element={<PaisesContainer />} >
+              <Route path="new" element={<PaisesContainer />} />
+              <Route path="edit/:id" element={<PaisesContainer />} />
+            </Route>
+
+            <Route path="parametricas/provincias" element={<ProvinciasContainer />}>
+              <Route path="new" element={<ProvinciasContainer />} />
+              <Route path="edit/:id" element={<ProvinciasContainer />} />
+            </Route>
+
+            {/*<Route path={'departamento'} element={<DepartamentosContainer />} />
             <Route path={'localidades'} element={<LocalidadesContainer />} />
             <Route path={'categorias_iva'} element={<CategoriasIvaContainer />} />
             <Route path={'tipos_comprobante'} element={<TiposComprobanteContainer />} />

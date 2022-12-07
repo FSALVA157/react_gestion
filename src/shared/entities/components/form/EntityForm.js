@@ -12,7 +12,6 @@ const FormItem = Form.Item
 const EntityForm = props => {
   const navigate = useNavigate()
   const location = useLocation()
-  const [entidad, setEntidad] = useState(undefined)
   const [working, setWorking] = useState(false)
   const [form] = Form.useForm()
   const { id } = useParams()
@@ -28,8 +27,7 @@ const EntityForm = props => {
     setWorking(true)
     EntitiesApi.get(props.metadata.endpoint, id)
       .then(response => {
-        setWorking(false)
-        setEntidad(response)
+        setWorking(false)        
         form.setFieldsValue({ ...response })
       })
       .catch(error => setWorking(false))
@@ -64,7 +62,6 @@ const EntityForm = props => {
               form={form}
               name="formulario"
               onFinish={onFinish}
-              initialValues={{ ...entidad }}
               scrollToFirstError >      
 
              <FormBuilder meta={ props.formDefinition } form={ form } />
